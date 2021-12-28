@@ -41,6 +41,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " Terminal Fun
 tnoremap <Esc> <C-\><C-n>
+tnoremap <C-h> <C-w>h
+tnoremap <C-j> <C-w>j
+tnoremap <C-k> <C-w>k
+tnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
