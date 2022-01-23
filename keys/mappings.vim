@@ -24,11 +24,9 @@ nnoremap <S-TAB> :bprevious<CR>
 " Alternate way to save
 nnoremap <C-s> :w<CR>
 " Alternate way to quit
-nnoremap <C-Q> :wq!<CR>
+nnoremap <C-Q> :bd!<CR>
 " Use control-c instead of escape
 nnoremap <C-c> <Esc>
-" <TAB>: completion.
-inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Better tabbing
 vnoremap < <gv
@@ -48,3 +46,12 @@ tnoremap <C-l> <C-w>l
 
 nnoremap <Leader>o o<Esc>^Da
 nnoremap <Leader>O O<Esc>^Da
+
+" Code Actions
+nnoremap <silent> ga <cmd>lua vim.lsp.buf.code_action()<CR>:w<CR>
+
+" Tabs
+nnoremap <C-\><TAB> :tabnext<CR>
+
+" NERDTREE
+nnoremap <C-n> :NERDTree<CR>

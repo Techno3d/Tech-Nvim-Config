@@ -24,4 +24,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}   
     " Debug
     Plug 'mfussenegger/nvim-dap'
+    " Snippet engine
+    Plug 'hrsh7th/vim-vsnip'
+    " Dev Icons
+    Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
