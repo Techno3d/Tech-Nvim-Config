@@ -26,4 +26,11 @@ nnoremap("<leader>y:", "\"+y")
 vnoremap("<leader>y:", "\"+y")
 inoremap("<leader>Y:", "\"+y")
 
+nnoremap("<tab>",  ":bnext<CR>")
+nnoremap("<S-tab>",  ":bprevious<CR>")
 
+-- Better window navigation
+nnoremap("<C-h>", "<C-w>h")
+nnoremap("<C-j>",  "<C-w>j")
+nnoremap("<C-k>", "<C-w>k")
+nnoremap("<C-l>", "<C-w>l")

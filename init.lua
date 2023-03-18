@@ -1,1 +1,6 @@
 require("start")
+vim.api.nvim_set_hl(0, "Normal", {bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", {bg = "none" })
+vim.api.nvim_command("highlight Normal ctermbg=NONE guibg=NONE")
+vim.api.nvim_command("highlight LineNr ctermbg=NONE guibg=NONE")
+vim.api.nvim_command("highlight SignColumn ctermbg=NONE guibg=NONE")
