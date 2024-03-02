@@ -3,7 +3,8 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
   'eslint',
-  'rust_analyzer'
+  'rust_analyzer',
+  'jdtls'
 })
 
 local cmp = require('cmp')
@@ -30,3 +31,4 @@ lsp.on_attach(function (client, bufnr)
 end)
 
 lsp.setup()
+vim.keymap.set("n", "<leader>er", function () vim.diagnostic.open_float() end, opts)
