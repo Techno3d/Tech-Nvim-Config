@@ -10,7 +10,7 @@ vim.opt.showmode = false
 -- vim.opt.undofile = true
 
 -- Decrease mapped sequence wait time
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 400
 
 vim.opt.inccommand = 'split'
 -- vim.opt.cursorline = true
@@ -45,6 +45,13 @@ vim.keymap.set("n", "<leader>bn",  ":bnext<CR>")
 vim.keymap.set("n", "<S-tab>",  ":bprevious<CR>")
 vim.keymap.set("n", "<leader>bp",  ":bprevious<CR>")
 vim.keymap.set("n", "<leader>bd",  ":bd<CR>")
+vim.keymap.set("n", "<leader>bx",  ":bd!<CR>")
+vim.keymap.set("n", "<leader>bl",  ":buffers<CR>")
 
 -- Setting up lazy.nvim
 require("config.lazy")
+
+-- Telescope stuff
+require("telescope").setup()
+vim.keymap.set("n", "<leader>bf", require("telescope.builtin").buffers)
+vim.keymap.set("n", "<leader>ff", require("telescope.builtin").find_files)
