@@ -40,7 +40,7 @@ vim.keymap.set("n", "<C-j>",  "<C-w>j")
 vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 
--- Use netrw as filebrowser (maybe switch to oil?)
+-- Use oil as filebrowser
 vim.keymap.set("n", "<leader>fe", "<CMD>Oil<CR>")
 
 -- The tab/buffer keybinds
@@ -82,6 +82,18 @@ require("oil").setup()
 -- Mason setup for LSPs
 require("mason").setup()
 
+-- LSP & Autocomplete
+vim.opt.completeopt = { "menuone", "fuzzy", "noselect", "popup" } 
+vim.opt.complete = ".,o" -- use buffer and omnifunc
+vim.o.autocomplete = true
+
+-- Set autocomplete on LspAttach
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(ev)
+    vim.lsp.completion.enable(true, ev.data.client_id, ev.buf, {
+      autotrigger = true,
+    })
+  end,
+})
 -- Enable lsps
--- nvim-lspconfig handles the options
 vim.lsp.enable({"pyright", "emmylua_ls", "rust-analyzer", "clangd"})
